@@ -2,7 +2,7 @@
 
 int main()
 {
-    int i,a[10],n,b[10],p,temp;
+    int i,a[10],n,b[10],p,temp,j;
     scanf("%d",&n);
     for(i=0; i<n; i++)
     {
@@ -11,9 +11,9 @@ int main()
     
     p = n-1;
 
-    while(p!=0)
+    for(j=1;j<=p;j++)
     {
-    for(i=0;i<=p;i++)
+    for(i=0;i<=p-j;i++)
     {
       if(a[i]>a[i+1])
       {
@@ -21,9 +21,9 @@ int main()
           a[i] = a[i+1];
           a[i+1] = temp;
       }
-       
+      
     }
-    p = p-1; 
+     
     }
 
     for(i=0; i<n; i++)
